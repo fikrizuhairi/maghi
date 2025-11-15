@@ -26,7 +26,7 @@
       font-style: normal;
     }
 
-    /* --- TANPA MENGUBAH FUNGSI LAIN: tambahkan @font-face untuk Tangerine --- */
+    /* 1) muatkan font Tangerine (letakkan selepas @font-face FlashFont anda) */
 @font-face {
   font-family: 'Tangerine';
   src: url('Tangerine-Regular.ttf') format('truetype');
@@ -42,7 +42,8 @@
   font-display: swap;
 }
 
-    .content.fullwidth .nama-vertical .and {
+/* 2) gaya untuk ampersand (&) pada intro — gunakan Tangerine Bold */
+.content.fullwidth .nama-vertical .and {
   font-family: 'Tangerine', 'Playfair Display', serif;
   font-weight: 700;           /* paksa ke Bold (akan guna Tangerine-Bold) */
   font-size: 56px;            /* sesuaikan saiz jika mahu lebih besar/kecil */
@@ -52,6 +53,7 @@
   padding: 0;
   /* jika mahu sedikit jarak atas/bawah, boleh tambah margin */
 }
+
 
 
     /* ---------- FIXED BACKGROUND (paling belakang) ---------- */

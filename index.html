@@ -363,7 +363,7 @@ h2 {
 .bubble .meta {
   font-weight: 700;
   font-style: normal;
-  font-size: 20px;
+  font-size: 16px;
   color: #1f2d3a;
   margin-top: 4px;
 }
@@ -400,6 +400,28 @@ h2 {
 .bubbles::-webkit-scrollbar-track {
   background: transparent;
 }
+
+    /* Garisan pemisah antara setiap ucapan */
+.bubble {
+  position: relative;
+  padding-bottom: 18px;   /* jarak sebelum garisan */
+  margin-bottom: 18px;    /* jarak selepas garisan */
+  width: 100%;
+}
+
+/* Line style */
+.bubble:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60%;               /* panjang line */
+  height: 1px;              /* ketebalan */
+  background: #d8cbb8;      /* warna emas lembut */
+  opacity: 0.8;
+}
+
 
 
 

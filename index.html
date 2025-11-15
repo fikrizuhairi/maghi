@@ -379,6 +379,28 @@ h2 {
   .bubble .meta { font-size: 15px; }
   .bubbles { gap: 18px; }
 } 
+    /* Scroll untuk bahagian Ucapan */
+.bubbles {
+  max-height: 380px;      /* boleh ubah tingginya ikut suka */
+  overflow-y: auto;       /* enable vertical scroll */
+  padding-right: 4px;
+  scroll-behavior: smooth;
+}
+
+/* scrollbar cantik */
+.bubbles::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bubbles::-webkit-scrollbar-thumb {
+  background: #d1c3aa;
+  border-radius: 4px;
+}
+
+.bubbles::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 
 
     .map-popup iframe{ width:100%; height:60vh; max-height:760px; border:none; border-radius:10px; margin-top:8px }

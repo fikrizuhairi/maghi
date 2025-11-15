@@ -790,7 +790,7 @@ h2 {
         const ts = it.timestamp || it.Timestamp || it.ts || '';
         const bubble = document.createElement('div'); bubble.className='bubble';
         const timeLabel = ts ? (new Date(ts)).toLocaleString() : (new Date()).toLocaleString();
-        bubble.innerHTML = '<div class=\"meta\">'+escapeHtml(nama)+escapeHtml(timeLabel)+'</span></div><div class=\"msg\">'+escapeHtml(ucapan)+'</div>';
+        bubble.innerHTML = '<div class=\"meta\">'+escapeHtml(nama)+'</span></div><div class=\"msg\">'+escapeHtml(ucapan)+'</div>';
         bubblesContainer.appendChild(bubble);
       });
 

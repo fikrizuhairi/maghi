@@ -44,21 +44,17 @@
   font-display: swap;
 }
 
-    @font-face {
-  font-family: 'CinzelDecorative';
+   /* ================================
+   CINZEL DECORATIVE — REGULAR ONLY
+   ================================ */
+@font-face {
+  font-family: 'CinzelDecorative-Regular';
   src: url('CinzelDecorative-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'CinzelDecorativeBold';
-  src: url('CinzelDecorative-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ensure the nama lines keep original FlashFont fallback */
 .content.fullwidth .nama-vertical {
@@ -98,6 +94,18 @@
   transform: translateY(0px) !important;
   display: block;
 }
+
+    /* Ampersand (&) menggunakan Cinzel Decorative Regular */
+.content.fullwidth .nama-vertical .and {
+  font-family: 'CinzelDecorative-Regular', serif !important;
+  font-weight: 400 !important;     /* Regular */
+  font-size: 56px !important;      /* boleh ubah ikut suka */
+  line-height: 1 !important;
+  color: #a67c52 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 
 
 

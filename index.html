@@ -313,8 +313,31 @@ h2 {
 
     @media (max-width:420px){ .contact-card{ width:calc(100% - 28px); padding:16px } }
 
-    .bubbles{ display:flex; flex-direction:column; gap:8px; margin:12px 0; max-height:300px; overflow-y:auto; padding-right:4px; scroll-behavior:smooth }
-    .bubble{ align-self:flex-start; background:#fff4e9; border:1px solid #f0e1cf; padding:10px 14px; border-radius:18px; max-width:90%; box-shadow:0 6px 12px rgba(0,0,0,0.06); }
+/* Center-kan bubble, tetapi tulisan dalam bubble kekal kiri */
+.bubbles {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 4px;
+  scroll-behavior: smooth;
+  align-items: center;  /* center bubble card */
+}
+
+.bubble {
+  align-self: center;   /* center card position */
+  text-align: left;     /* tulisan kekal kiri */
+  background: #fff4e9;
+  border: 1px solid #f0e1cf;
+  padding: 10px 14px;
+  border-radius: 18px;
+  max-width: 90%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+}
+
+    
     .bubble .meta{ font-size:12px; color:var(--muted); margin-bottom:6px; font-weight:600 }
     .bubble .msg{ font-size:14px; color:#222; line-height:1.4 }
 

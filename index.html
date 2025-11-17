@@ -768,7 +768,13 @@ h2 {
   if(openExternalRsvp) openExternalRsvp.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); popupRsvp.style.display='none'; popupRsvpIframe.style.display = (popupRsvpIframe.style.display==='block')? 'none':'block'; popupRsvpIframe.setAttribute('aria-hidden', popupRsvpIframe.style.display==='none'); const el = document.getElementById('rsvp_nama'); if(el) el.focus(); });
   if(openUcapanBtn) openUcapanBtn.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); popupRsvp.style.display='none'; ucapanForm.style.display = (ucapanForm.style.display==='block')? 'none':'block'; ucapanForm.setAttribute('aria-hidden', ucapanForm.style.display==='none'); 
   const el = document.getElementById('ucap_name'); 
-  if(el && !isMobile()) el.focus();  });
+  function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+// when showing form, focus only if NOT mobile
+if (el && !isMobile()) el.focus();
+  });
 
   // close popup buttons
   const closeRsvpIframe = document.getElementById('closeRsvpIframe');
